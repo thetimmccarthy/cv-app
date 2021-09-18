@@ -22,7 +22,7 @@ class General extends Component {
         this.setState({
             [toChange]: event.target.value
         })
-        console.log(event.target)
+        
         event.preventDefault();
     }
 
@@ -36,23 +36,23 @@ class General extends Component {
     render() {        
         if(this.state.edit) {                    
             return (
-                <div>
+                <div>                    
                     <form onSubmit={this.onSubmit}>
-                        <div class="form-floating">
-                            <label for="name">Name:</label>                            
-                            <input type="text"  class="form-control" id="name" name="name" value={this.state.name} onChange={this.onChange} />
+                        <div className="form-floating">
+                            <label htmlFor="name">Name:</label>                            
+                            <input type="text"  className="form-control" id="name" name="name" value={this.state.name} onChange={this.onChange} />
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>                            
-                            <input type="email" class="form-control" id="email" name="email" value={this.state.email} onChange={this.onChange} />
+                        <div className="form-group">
+                            <label htmlFor="email">Email:</label>                            
+                            <input type="email" className="form-control" id="email" name="email" value={this.state.email} onChange={this.onChange} />
                         </div>
-                        <div class="form-group">
-                            <label for="phone"> Phone: (format: 123-456-7890) </label>                            
-                            <input type="tel" class="form-control" id="phone" name="phone"
+                        <div className="form-group">
+                            <label htmlFor="phone"> Phone: (format: 123-456-7890) </label>                            
+                            <input type="tel" className="form-control" id="phone" name="phone"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 value={this.state.phone} onChange={this.onChange} />
                         </div>                            
-                        <input type="submit" value="submit" class="btn btn-primary"/>                        
+                        <input type="submit" value="submit" className="btn btn-primary"/>                        
                     </form>                                
                 </div>
             )
