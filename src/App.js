@@ -4,8 +4,8 @@ import Education from './components/Education'
 import WorkExperience from './components/WorkExperience';
 function App() {
   return (
-    <div className="App">
-          <General />
+    <div className="App" >
+          <General className="App" />
           <br/>
           <Education />
           <br/>

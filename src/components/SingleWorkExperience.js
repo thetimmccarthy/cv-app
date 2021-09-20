@@ -60,8 +60,9 @@ class SingleWorkExperience extends Component {
                     <h3>{this.state.work.year_start} - {this.state.work.year_end}</h3>
                     <p>{this.state.work.description}</p>
                     <form onSubmit={this.isEdit}>
-                        <input type="submit" value="edit" />
+                        <input type="submit" value="edit" className="btn btn-primary"/>
                     </form>
+                    <br/>
                 </div>
             )
         } else {
@@ -90,7 +91,7 @@ class SingleWorkExperience extends Component {
                     <div className="form-group">
                         <label htmlFor="description"> Description </label>                            
                         <input type="text" className="form-control" id="description" name="description"                                
-                            value={this.state.work.description} onChange={this.onChange} />
+                            value={this.state.work.description} onChange={this.onChange}  />
                     </div>                  
                     <input type="submit" value="submit" className="btn btn-primary"/>                        
                 </form>                            

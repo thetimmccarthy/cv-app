@@ -97,6 +97,7 @@ class WorkExperience extends Component {
         
         if (this.state.addNew) {
             enterWork = (
+                <div>
                 <form onSubmit={this.onSubmitWork}>
                     <div className="form-floating">
                         <label htmlFor="position">Company</label>                            
@@ -124,9 +125,20 @@ class WorkExperience extends Component {
                             value={this.state.work.description} onChange={this.onChange} />
                     </div>                  
                     <input type="submit" value="submit" className="btn btn-primary"/>                        
-                </form>                              
+                </form>
+                <br/>
+                <form onSubmit={this.onAddNew}> 
+                    <input type="submit" value="Cancel" className="btn btn-primary" />
+                </form>                                   
+                </div>
             )
         
+        } else {
+            enterWork = (
+                <form onSubmit={this.onAddNew}>
+                    <input type="submit" value={'Add Work Experience!'} className="btn btn-primary"/>
+                </form>
+            )
         }
         return (
             <div>
@@ -138,9 +150,7 @@ class WorkExperience extends Component {
                     })}
                 </div>
                 {enterWork}
-                <form onSubmit={this.onAddNew}>
-                    <input type="submit" value={'Add Work Experience!'} />
-                </form>
+                
             </div>
         )
     }

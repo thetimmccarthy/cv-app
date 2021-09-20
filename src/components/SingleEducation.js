@@ -57,8 +57,9 @@ class SingleEducation extends Component {
                     <h3>{this.state.school.major}</h3>
                     <h3>{this.state.school.year}</h3>
                     <form onSubmit={this.isEdit}>
-                        <input type="submit" value="Edit"/>
+                        <input type="submit" value="Edit" className="btn btn-primary"/>
                     </form>
+                    <br/>
                 </div>
             )
         } else {

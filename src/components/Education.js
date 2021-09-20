@@ -113,8 +113,18 @@ class Education extends Component {
                                 value={this.state.school.year} onChange={this.onChange} />
                         </div>                  
                         <input type="submit" value="submit" className="btn btn-primary"/>                        
-                    </form>                                
+                    </form>                           
+                    <br/>
+                    <form onSubmit={this.onAddNew}> 
+                        <input type="submit" value="Cancel" className="btn btn-primary" />
+                    </form>     
                 </div>
+            )
+        } else {
+            enterEducation = (
+                <form onSubmit={this.onAddNew}>
+                    <input type="submit" value={'Add school!'} className="btn btn-primary"/>
+                </form>
             )
         }
         return (
@@ -127,9 +137,7 @@ class Education extends Component {
                     
                 </div>
                 {enterEducation}
-                <form onSubmit={this.onAddNew}>
-                    <input type="submit" value={'Add school!'} />
-                </form>
+                
             </div>
         )
     }
