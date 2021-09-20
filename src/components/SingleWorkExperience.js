@@ -97,7 +97,6 @@ class SingleWorkExperience extends Component {
                 </form>                            
             )
         }
-        
         return work
     }
 }

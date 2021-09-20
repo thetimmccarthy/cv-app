@@ -33,8 +33,7 @@ class Education extends Component {
         console.log("SCHOOLS: ", this.state.schools)
         console.log("INFO: ", newSchoolInfo)
         let tempSchools = this.state.schools.map((school) => {
-            if (school.id === newSchoolInfo.id) {
-                
+            if (school.id === newSchoolInfo.id) {                
                 school.name = newSchoolInfo.name;
                 school.major = newSchoolInfo.major;
                 school.degree = newSchoolInfo.degree;
@@ -48,7 +47,7 @@ class Education extends Component {
             schools: tempSchools
         });
     }
-    // This needs to be editted to be a function that is passed to SingleEducation (which will call it upon submitting new education listing)
+    
     onSubmitSchool = (event) => {
         event.preventDefault();        
         let tempSchool = {
@@ -129,12 +128,10 @@ class Education extends Component {
         }
         return (
             <div>
-                <div>
-                    
+                <div>                    
                     {this.state.schools.map((school) => {
                         return <SingleEducation name={school.name} degree={school.degree} major={school.major} year={school.year} id={school.id} onEdit={this.onEdit}/>
-                    })}
-                    
+                    })}                    
                 </div>
                 {enterEducation}
                 

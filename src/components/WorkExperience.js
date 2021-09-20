@@ -89,9 +89,6 @@ class WorkExperience extends Component {
         })
     }
 
-
-
-
     render() {
         let enterWork;
         
