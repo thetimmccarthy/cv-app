@@ -17,6 +17,7 @@ class Education extends Component {
             count: 0
         }
     this.onAddNew = this.onAddNew.bind(this);
+    this.onChange = this.onChange.bind(this);
     this.onEdit = this.onEdit.bind(this);
     this.onSubmitSchool = this.onSubmitSchool.bind(this);
     }

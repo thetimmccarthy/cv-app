@@ -33,14 +33,11 @@ class SingleEducation extends Component {
         this.setState({
             edit: !this.state.edit
         })
-        
-        // console.log(event.target);
     }
 
     onChange = (event) => {
         event.preventDefault();
         let toChange = event.target.name;
-        
         this.setState({
             school: {
                 ...this.state.school,
